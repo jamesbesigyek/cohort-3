@@ -37,8 +37,8 @@ America= new country('North America','white','president', '100m', '4 seasons','E
 //Institutions of higher learning
 function university (name, country, continent,ranking,ownership,language){
     
-    this.country = name
-    this.region =country
+    this.name = name
+    this.country =country
     this.continent = continent
     this.ranking = ranking
     this.ownership = ownership
