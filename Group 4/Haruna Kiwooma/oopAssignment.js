@@ -1,8 +1,11 @@
 /* create six objects of and six instance of each */
-function book (title, author, pages) {
+function book (title, author, pages, isbn, edition, releaseDate) {
   this.title = title
   this.author = author
   this.pages = pages
+  this.isbn = isbn
+  this.edition = edition
+  this.releaseDate = releaseDate
 }
 
 function chair (color, type, size) {
@@ -11,9 +14,10 @@ function chair (color, type, size) {
   this.type = type
 }
 
-function school (name, level, numberOfStudents, classes) {
+function school (name, level, classNumbers, studentTotalNumber, teacherTotalNumber) {
   this.name = name
   this.level = level
-  this.numberOfStudents = numberOfStudents
-  this.classes = classes
+  this.classNumbers = classNumbers
+  this.studentTotalNumber = studentTotalNumber
+  this.teacherTotalNumber = teacherTotalNumber
 }
