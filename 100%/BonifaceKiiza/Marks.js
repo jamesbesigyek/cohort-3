@@ -7,6 +7,7 @@ function checktest(a, b) {
 function coursework(cos) {
     let d = checktest(70, 80) + cos
     let average =(d/2)
+
     let f = average * (40 / 100)
     return f
 }
