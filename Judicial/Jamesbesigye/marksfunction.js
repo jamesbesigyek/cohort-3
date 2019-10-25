@@ -1,4 +1,4 @@
-//function to receive two marks and choose a higher marl
+//function to receive two marks and choose a higher mark
 
 function marks(mark1,mark2){
   var mark1, mark2, highermark
