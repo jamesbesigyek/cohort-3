@@ -26,17 +26,17 @@
                     <form action="#">
                         <div class="container">
                             <div class="row">
-                                    <div >
+                                    <div style="font-size: 30px; font-weight: bolder;">
                                         Email Address
-                                        <label for="staticEmail2" class="sr-only">Email</label>
+                                 
                                         <input class="fieldStyle" id="display1" type="text" id="staticEmail2" id="check1" placeholder="email@name.com">
                                     </div>
-                                    <p id="log1"></p>
+                                    <p id="log1" style="font-weight: bold;"></p>
                             </div>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
                             <div class="row">
-                                    <div >
+                                    <div style="font-size: 30px; font-weight: bolder;">
                                         Password
-                                        <label for="inputPassword2" class="sr-only">Password</label>
+                                        
                                         <input class="fieldStyle" id="display" type="password" id="inputPassword2" placeholder="Password">
                                     </div>
                             </div>
@@ -45,15 +45,15 @@
                         <div><br>
                             <div>
                                 
-                                        <input type="submit" class="button1" value="Log In" onclick="check()">   &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                                   
+                                        <input style="color: rgb(17, 17, 17); font-weight: bold; background-color: blue;"  type="submit" class="button1" value="Log In" onclick="check()">   &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                                   
                                 
                                           
                         
                                 
-                                        <input id="displayButton" class="button1" type="Reset" value="Cancel"> 
+                                        <input style="color: rgb(14, 13, 13); font-weight: bold; background-color: aquamarine;" id="displayButton" class="button1" type="Reset" value="Cancel"> 
                                 
                             </div>                        
-                            <p id="log"></p>
+                            <p id="log" style="font-weight: bold;"></p>
                         </div>  
                         
                             
@@ -102,7 +102,13 @@ if (email.value != '' && password.value != ''){
     alert('You have logged in with:\t' + email.value ,  password.value)
     
     return true
-} 
+} else{
+                           
+    alert('Please fill the blank spaces')
+
+    display1.style.border = '2px solid red'
+    display.style.border = '2px solid red'
+}
 
 }
     </script>
