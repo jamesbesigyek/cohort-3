@@ -1,10 +1,10 @@
 /* oop Object Oriented Programing......function is a first class object */
 
-/* var student = {
+var student = {
 name: "Slayqueenoriginal",
 age:50,
 dob: 1995
-} */
+}
 
 /* another style with a constructor */ 
 /* function student (x,y,z) {
