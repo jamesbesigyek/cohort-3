@@ -92,6 +92,33 @@
         document.getElementById('name').innerHTML = "Student's Name : " + student
         document.getElementById('final').innerHTML = `The Final Exam Mark is  ${EXAM(t1, t2, coswork, finalExam)} `
 
+        function coursework(a, b, c) {
+            let t1 = a
+            let t2 = b
+            let cw = c
+            /*Creating a variable add marks
+            Calling the function best test and adding it to 
+            coursework mark*/
+            let addMarks = (bestTest(t1, t2) + cw);
+            let avg = ((addMarks / 2));
+            let finalCosWork = avg * (40 / 100)
+            return finalCosWork
+        }
+
+        var exam = prompt('Enter exam mark')
+        var finalExam = parseInt(exam)
+
+        function EXAM(f, g, h, i) {
+            let t1 = f, t2 = g, cw = h, examMark = i;
+            let calcExam = examMark * (60 / 100);
+            let examFinal = coursework(t1, t2, coswork) + calcExam;
+            return examFinal
+        }
+        //Accesing the element with id display
+        // var z = document.write(`The final exam mark is  ${EXAM(t1,t2,coswork,finalExam)} `)
+
+        document.getElementById('name').innerHTML = "Student's Name : " + student
+        document.getElementById('final').innerHTML = `The Final Exam Mark is  ${EXAM(t1, t2, coswork, finalExam)} `
 
 
     </script>
