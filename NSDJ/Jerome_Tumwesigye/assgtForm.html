@@ -43,14 +43,18 @@
 
             //set the condition for the both fields using the variables
             //userName.value == "" means that if there is no value assigned to the variable userName ...
-            if (userName.value == "" && passwd.value == "") {
+            if (userName.value == "") {
               //to alert is to pop-up a message. we use the keyword 'alert'.
-                alert("Do not leave any empty field")
+                alert("UserName is empty")
                 //what happens to the text fields if the condition is true.
                 //Styling the border of the userName text field to red
                 userName.style.border = "2px solid red"
-                passwd.style.border = "2px solid red"
+    
               //This command prevents the execution of other commands before the above is excecuted.
+                return false;
+            }else if(passwd.value == ""){
+                alert("Password is empty")
+                passwd.style.border = "2px solid red"
                 return false;
             }
         }
@@ -59,30 +63,35 @@
         /*This function resets the form with an alert for the user
         creating an event handler that will be triggered after event reset*/
         function logReset(event) {
+            const log1 = document.getElementById('log1')
+            const form = document.getElementById("form")
+            // const cancel = document.getElementById("cnlbtn")
             //'textContent' is a property of log1 identifier that indicates that a text will be displayed
             //event.timeStamp means that timestamp is a property of an object 'event' and will print time in milli-seconds
+
             log1.textContent = `Form reset! time stamp: ${event.timeStamp}`
         }
-        //accessing DOM elements and we set a listener to form tag
-        const log1 = document.getElementById('log1')
-        const form = document.getElementById("form")
+        //accessing DOM elements and we set a listener to form tag    
+        
         //Embedding an eventListener in the form that will reset the form and then execute the logSet function
         form.addEventListener("reset", logReset)
+        
+
 
 
         /*This function displays the text selection for the username.
         set 'event' as a property of the function logSelect*/
         function logselect(event) {
             //declare a variable for the element to be executed
-            const userName = document.getElementById("userName")
+            var userName = document.getElementById("userName")
             //define the action.
             //
-            const select = event.target.value.substring(event.selectionStart, event.target.selectionEnd)
+            var select = event.target.value.substring(event.selectionStart, event.target.selectionEnd)
             //${select}; is a shortcut for the execution of the select command.
             alert(`You have selected: ${select}`)
         }
         //declaring a variable using a querry selector
-        const input = document.querySelector("input");
+        var input = document.querySelector("input");
         //Embedding an eventListener in the tag 'input' that executes the function 'logSelect' when a text is selected. 
         input.addEventListener("select", logselect);
 
