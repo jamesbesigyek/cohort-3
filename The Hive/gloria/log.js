@@ -16,7 +16,7 @@ function check(e){
     if (username.value==''&& password.value==''){
         alert ('enter password or username')
 
-        userName.style.border='2px solid red'
+        username.style.border='2px solid red'
         password.style.border='2px solid red'
     }
     else if (username.value!==''&& password.value==''){
@@ -28,9 +28,13 @@ function check(e){
         alert('enter your user name')
         username.style.border='2px solid red'
     }
-
+else if (password.value!==''&& username.value!==''){
+    alert('thanks for loging in')
+}
 }
 //accessing the login button with the id 'login'
 var login =document.getElementById('login')
 // inserting an event listener to the login button
+/*note on event listeners you insert the name the of the function that is to be 
+ called on the tag where the event handler is to happen*/
 login.addEventListener('click',check)
