@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script>
 
-      function checkTest1( ){
+      function checkTest1(){
         //create variables for all elements
         var firstTest = document.getElementById("test1")
         var secondTest = document.getElementById("test2")
@@ -26,7 +26,17 @@
          return false
         }
       }
-        </script>
+
+      function logReset(event){
+       
+       var par = document.getElementById("par")
+         par.textContent = `Time reset! Tme stamp: ${event.timeStamp}`
+
+
+      }
+      var cancel = document.getElementById("cancel")
+      cancel.addEventListener("reset", logReset)
+    </script>
     
   </head>
   <body style="margin: 0%;">
@@ -70,7 +80,7 @@
 
             </div>
             <div class="col-md-6" style="background-color: whitesmoke">
-              <form action="#">
+              <form action="#" id="form">
                 <div>
                   <p id="enter">
                     Enter respective scores to obtain the final mark.
@@ -107,7 +117,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-4">
-                          <input type="button" value="cancel" id="cancel">
+                          <input type="reset" value="cancel" id="cancel">
                          
                       </div>
                       <div class="col-md-8">
@@ -115,6 +125,7 @@
                       </div>
 
                     </div>
+                    <p id="par"></p>
                
                   </div>
 
@@ -130,8 +141,7 @@
                  
                   <span>
                     <label for="module score"
-                      >The consolidated Module score:</label
-                    >
+                      >The consolidated Module score:</label>
                     <input
                       type="text"
                       name=""
@@ -141,7 +151,8 @@
                   </span>
                   <br />
                 </div>
-              </form>  
+              </form> 
+              <p id="par"></p> 
             </div>
           </div>
         </div>
