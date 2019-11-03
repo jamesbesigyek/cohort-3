@@ -5,22 +5,26 @@
 
     <title>Assignment form</title>
     <!-- linking the html document to the stylesheet -->
-    <link rel="stylesheet" href="assgtForm.css">
+    <link rel="stylesheet" href="loginFormAssgt.css">
 </head>
 
 <body>
+        <h1>TOYOTA UGANDA (U) LTD.</h1>
     <!--creating a main div-->
     <div class="div1">
-        <h1 style="margin-left: 280px; color: #ffffff;; font-size: 35px; font-family: Arial, Helvetica, sans-serif">Login</h1>
+      
         <!-- creating a form for the text fields and labels -->
         <form action="#" id="form">
-            <div id="formdiv">
+            <div>
+                <h2>Login</h2>
                 <!-- creating username and password labels and fields -->
-                <label style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Username:</label> <br>
-                <input type="text" id="userName" placeholder="user name, email or phone"><br><br>
-                <label style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 24px">Password:</label> <br>
-                <input type="password" id="passwd" placeholder="Please enter your password"> <br> <br>
-                <button type="login" id="logbtn" onclick="checkForm()">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                <label style="font-family: 'Times New Roman', Times, serif; font-size: 24px;">Username:</label> <br>
+                <input type="text" id="userName" placeholder="User name, email or phone"><br><br>
+                <label style="font-family: 'Times New Roman', Times, serif; font-size: 24px">Password:</label> <br>
+                <input type="password" id="passwd" placeholder="Please enter your password">
+
+                <p style="font-size: 15px; font-family:Arial, Helvetica, sans-serif;"><a href="link">Forgot password?</a></p>
+                <button type="login" id="logbtn" onclick="checkForm()">Login</button> &nbsp;&nbsp;&nbsp;
 
                 <button type="reset" id="cnlbtn">Cancel</button>
 
@@ -28,7 +32,9 @@
             </div>
         </form>
         <!-- A paragraph space for displaying the timestamp -->
-        <p id="log1" style="color: aliceblue; text-align:center;"></p>
+        <p id="log1" style="color: #b35900; text-align:left; font-size: 17px;"></p>
+
+        <p style="font-size: 15px; font-family:Arial, Helvetica, sans-serif;">New user? <a href="link">sign up now >></a></p>
 
     </div>
     

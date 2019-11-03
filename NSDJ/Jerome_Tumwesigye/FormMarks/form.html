@@ -6,37 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Marks</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script>
-
-      function checkTest1(){
-        //create variables for all elements
-        var firstTest = document.getElementById("test1")
-        var secondTest = document.getElementById("test2")
-        var assignment = document.getElementById("assgnt")
-        var examScore = document.getElementById("exam")
-        //let elementvalue = name.value
-        if (firstTest.value =="" && secondTest.value == "" && assignment.value == "" && examScore.value == ""){
-         alert("First test should not be empty")
-         firstTest.style.border =  "2px solid red"
-         secondTest.style.border =  "2px solid red"
-         assignment.style.border =  "2px solid red"
-         examScore.style.border =  "2px solid red"
-         
-         return false
-        }
-      }
-
-      function logReset(event){
-       
-       var par = document.getElementById("par")
-         par.textContent = `Time reset! Tme stamp: ${event.timeStamp}`
-
-
-      }
-      var cancel = document.getElementById("cancel")
-      cancel.addEventListener("reset", logReset)
-    </script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    
     
   </head>
   <body style="margin: 0%;">
@@ -121,7 +92,7 @@
                          
                       </div>
                       <div class="col-md-8">
-                          <input type="button" value="Submit" id="btn" onclick="checkTest1()"/>
+                          <input type="button" value="Submit" id="btn">
                       </div>
 
                     </div>
@@ -159,13 +130,14 @@
       </div> 
       <footer style="background-color:#009933 ; width:100%; height: 40px;">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12"></div>
+          <div class="row" >
+            <div class="col-md-12" id="copyRight">
             <p>© Clarke International University. All Rights Reserved</p>
+          </div>
           </div>
         </div>
       </footer>
     </div>
-
   </body>
 </html>
+
